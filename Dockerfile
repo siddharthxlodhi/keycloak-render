@@ -6,4 +6,4 @@ RUN /opt/keycloak/bin/kc.sh build
 
 EXPOSE 9090
 
-CMD ["start-dev", "--http-port", "9090"]
+CMD ["sh", "-c", "/opt/keycloak/bin/kc.sh start-dev --http-port 9090 --http-host 0.0.0.0"]
