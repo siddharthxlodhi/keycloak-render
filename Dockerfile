@@ -4,6 +4,6 @@ ENV KC_DB=postgres
 
 RUN /opt/keycloak/bin/kc.sh build
 
-EXPOSE 9090
+EXPOSE 8080
 
-CMD ["start-dev", "--http-port", "9090", "--http-host", "0.0.0.0"]
+CMD /bin/sh -c "/opt/keycloak/bin/kc.sh start-dev --http-port ${PORT} --http-host 0.0.0.0"
